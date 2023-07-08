@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+// import Header from "./Components/Header";
+// import Footer from "./Components/Footer";
+// import Navbar from "./Components/Navbar";
+// import Projects from "./Components/Projects";
+// function App() {
+//   const typed = select('.typed')
+//   if (typed) {
+//     let typed_strings = typed.getAttribute('data-typed-items')
+//     typed_strings = typed_strings.split(',')
+//     new Typed('.typed', {
+//       strings: typed_strings,
+//       loop: true,
+//       typeSpeed: 100,
+//       backSpeed: 50,
+//       backDelay: 2000
+//     });
+//   }
+//   return (
+//     <div className="App">
+//       <Navbar/>
+//      <Header/>
+//      <Projects/>
+//      <Footer/>
+//     </div>
+//   );
+// }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// export default App;
+
+import React, { Component } from 'react'
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import Projects from "./Components/Projects";
+
+export default class App extends Component {
+
+  typed = (e) => {
+   e.preventDefault();
+   
+  }
+  render() {
+    return (
+      <div>
+       <Navbar/>
+       <Header/>
+       <Projects/>
+       <Footer/>
+      </div>
+    )
+  }
 }
 
-export default App;
